@@ -1,0 +1,81 @@
+﻿@using System.Timers
+
+<div class="@ComponentCssClass" style="width:fit-content">
+    <div class="@TitleCssClass">
+        @Title
+    </div>
+    <div class="@DisplayCssClass">
+        <p>@TimerData</p>
+    </div>
+</div>
+
+@code {
+    private string cssClass = "sd-watch sd-watch-text";
+    private System.Timers.Timer aTimer;
+    private DateTime alarmTime;
+    private DateTime startTime;
+    public string TimerData { get; set; } = new DateTime().ToLongTimeString();
+
+    protected override async Task OnInitializedAsync()
+    {
+#if DEBUG
+        ////await Task.Delay(6000);
+#endif
+
+        // Create a timer with a one second interval.
+        aTimer = new System.Timers.Timer(1000);
+
+        // Hook up the Elapsed event for the timer.
+        aTimer.Elapsed += OnTimedEvent;
+        aTimer.AutoReset = true;
+        aTimer.Enabled = true;
+    }
+
+    private async void OnTimedEvent(Object source, ElapsedEventArgs e)
+    {
+        var currentTime = e.SignalTime;
+
+        startTime = DateTime.Now;
+
+        TimerData = e.SignalTime.ToLongTimeString();
+        DisplayValue = TimerData;
+
+        await RiseAlarm(currentTime);
+
+        StateHasChanged();
+    }
+
+    [Parameter]
+    public string DisplayValue { get; set; }
+
+    [Parameter]
+    public string ComponentCssClass { get; set; }
+
+    [Parameter]
+    public string TitleCssClass { get; set; }
+
+    [Parameter]
+    public string DisplayCssClass { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string CssClass
+    {
+        get { return cssClass; }
+        set
+        {
+            cssClass = $"sd-watch sd-watch-text {value}";
+        }
+    }
+
+    [Parameter]
+    public EventCallback<DateTime> OnAlarmTime { get; set; }
+
+    public async Task RiseAlarm(DateTime alarm)
+    {
+        await OnAlarmTime.InvokeAsync(alarm);
+    }
+
+}
