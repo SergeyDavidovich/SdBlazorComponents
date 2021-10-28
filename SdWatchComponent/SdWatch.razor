@@ -16,7 +16,7 @@
     private DateTime startTime;
     public string TimerData { get; set; } = new DateTime().ToLongTimeString();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
 #if DEBUG
         ////await Task.Delay(6000);
