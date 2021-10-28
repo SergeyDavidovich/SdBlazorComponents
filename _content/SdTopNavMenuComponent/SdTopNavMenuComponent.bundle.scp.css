@@ -1,0 +1,8 @@
+@import '';
+
+/* _content/SdTopNavMenuComponent/SdTopNavMenu.razor.rz.scp.css */
+@media (min-width: 800px) {
+    .sidebar[b-9jwglrgzzh] {
+        display: none !important;
+    }
+}
