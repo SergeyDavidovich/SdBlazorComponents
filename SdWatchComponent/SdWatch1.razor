@@ -1,6 +1,6 @@
 ﻿@using System.Timers
 
-<div id="watch" class="@ComponentCssClass" style="width:auto">
+<div class="@ComponentCssClass" style="width:fit-content">
     <div class="@TitleCssClass">
         @Title
     </div>
@@ -10,6 +10,7 @@
 </div>
 
 @code {
+    private string cssClass = "sd-watch sd-watch-text";
     private System.Timers.Timer aTimer;
     private DateTime alarmTime;
     private DateTime startTime;
@@ -20,7 +21,10 @@
 #if DEBUG
         ////await Task.Delay(6000);
 #endif
+
+        // Create a timer with a one second interval.
         aTimer = new System.Timers.Timer(1000);
+
         // Hook up the Elapsed event for the timer.
         aTimer.Elapsed += OnTimedEvent;
         aTimer.AutoReset = true;
@@ -41,6 +45,7 @@
         StateHasChanged();
     }
 
+    [Parameter]
     public string DisplayValue { get; set; }
 
     [Parameter]
@@ -54,6 +59,16 @@
 
     [Parameter]
     public string Title { get; set; }
+
+    [Parameter]
+    public string CssClass
+    {
+        get { return cssClass; }
+        set
+        {
+            cssClass = $"sd-watch sd-watch-text {value}";
+        }
+    }
 
     [Parameter]
     public EventCallback<DateTime> OnAlarmTime { get; set; }

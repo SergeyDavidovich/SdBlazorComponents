@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdBlazorComponents", "SdBlazorComponents\SdBlazorComponents.csproj", "{75B3F1EB-891E-4719-8743-1666D3A332AE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdWatchComponent", "SdWatchComponent\SdWatchComponent.csproj", "{E375A806-1CC3-4F4C-807B-9DB53D01FD77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdTopNavMenuComponent", "SdTopNavMenu\SdTopNavMenuComponent.csproj", "{53DBB816-C796-4B4F-AAD0-0AD7C47119F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdTopNavMenuComponent", "SdTopNavMenu\SdTopNavMenuComponent.csproj", "{53DBB816-C796-4B4F-AAD0-0AD7C47119F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
