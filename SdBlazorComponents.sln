@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdWatchComponent", "SdWatch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdTopNavMenuComponent", "SdTopNavMenu\SdTopNavMenuComponent.csproj", "{53DBB816-C796-4B4F-AAD0-0AD7C47119F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdSideBarComponent", "SdSideBarComponent\SdSideBarComponent.csproj", "{AF212A8C-210D-4AA2-ACE1-4E57BCE8D0C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{53DBB816-C796-4B4F-AAD0-0AD7C47119F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53DBB816-C796-4B4F-AAD0-0AD7C47119F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53DBB816-C796-4B4F-AAD0-0AD7C47119F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF212A8C-210D-4AA2-ACE1-4E57BCE8D0C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF212A8C-210D-4AA2-ACE1-4E57BCE8D0C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF212A8C-210D-4AA2-ACE1-4E57BCE8D0C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF212A8C-210D-4AA2-ACE1-4E57BCE8D0C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
