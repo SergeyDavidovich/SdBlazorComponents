@@ -20,7 +20,7 @@
     -moz-transition: left 0.3s;
     transition: left 0.3s;
     /* определяем цвет фона панели */
-    background: #16a085;
+    background: crimson;
     /* поверх других элементов */
     z-index: 2000;
 }
@@ -188,7 +188,8 @@ body[b-2iykidlmaa] {
     padding: 0;
     margin: 10px 0;
     text-align: center;
-    text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
+    color:white;
+    /*text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;*/
     font-size: 1.3em;
     line-height: 1.3em;
     opacity: 0;
