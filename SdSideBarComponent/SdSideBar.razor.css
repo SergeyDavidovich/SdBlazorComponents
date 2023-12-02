@@ -1,4 +1,6 @@
-﻿.nav {
+﻿/*https://dbmast.ru/vydvigayushheesya-bokovoe-menyu-na-chistom-css*/
+
+.nav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 320px;
     min-width: 300px;
@@ -15,7 +17,7 @@
     /* плавный переход смещения панели */
     -webkit-transition: left 0.3s;
     -moz-transition: left 0.3s;
-    transition: left 0.3s;
+    transition: left 0.93s;
     /* определяем цвет фона панели */
     background: crimson;
     /* поверх других элементов */
@@ -34,7 +36,7 @@
     /* относительно левого края панели */
     left: 320px;
     /* отступ от верхнего края панели */
-    top: 1em;
+    top: 0em;
     /* внутренние отступы */
     padding: 0.5em;
     /* определяем цвет фона переключателя
@@ -91,7 +93,7 @@
     [id='nav-toggle']:checked ~ .nav > .nav-toggle {
         left: auto;
         right: 2px;
-        top: 1em;
+        top: 0em;
     }
 
 

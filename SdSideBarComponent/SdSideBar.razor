@@ -1,23 +1,32 @@
-﻿@*
-    <div class="my-component">
-    This Blazor component is defined in the <strong>SdSideBarComponent</strong> package.
-</div>
-*@
-
+﻿
 <input type="checkbox" id="nav-toggle" hidden>
 <nav class="nav">
-    <label for="nav-toggle" class="nav-toggle" onclick> </label>
+    @*<label for="nav-toggle" class="nav-toggle" onclick()> </label>*@
+
+    <label for="nav-toggle" class="nav-toggle" @onclick="Toggle"> </label>
+
     <h2 class="logo">
-        @*<a href="//dbmast.ru/"> DBmast.ru</a>*@
         SD BLAZOR COMPONENTS
     </h2>
+
     <ul>
-        <li> <a href="#1"> Один</a></li>
-        <li> <a href="#2"> Два</a></li>
-        <li> <a href="#3"> Три</a></li>
+        <li> <a href="watch"> Watch component</a></li>
+        <li> <a href="topmenu">Topmenu component</a></li>
         <li> <a href="#4"> Четыре</a></li>
         <li> <a href="#5"> Пять</a></li>
         <li> <a href="#6"> Шесть</a></li>
         <li> <a href="#7"> Семь</a></li>
     </ul>
+
+
+<div class="mask-content"></div>
 </nav>
+@code {
+
+    public bool IsOpened = false;
+
+    public void Toggle(MouseEventArgs args)
+    {
+        IsOpened = !IsOpened;
+    }
+}

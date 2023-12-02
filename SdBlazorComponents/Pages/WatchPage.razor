@@ -1,0 +1,35 @@
+﻿@page "/watch"
+@using SdWatchComponent
+
+<label class="text-3xl text-light bg-secondary bg-gradient-to-r px-4 text-primary mt-12">
+    Hello, SdWatch!
+</label>
+<hr />
+<label class="text-2xl">@Alarm</label>
+<hr />
+<SdWatch1 Title="CURRENT TIME IS:" OnAlarmTime="@ShowAlarm"
+         ComponentCssClass="shadow px-0 py-0 mt-8"
+         TitleCssClass="text-white text-center bg-green-600 antialiased text-lg"
+         DisplayCssClass="text-green-600 select-none px-8 border-2 border-green-600 bg-white text-5xl">
+</SdWatch1>
+
+<SdWatch1 Title="CURRENT TIME IS:" OnAlarmTime="@ShowAlarm"
+         ComponentCssClass="shadow px-0 py-0 mt-8"
+         TitleCssClass="text-white text-center bg-green-600 antialiased text-lg"
+         DisplayCssClass="text-red-600 select-none px-8 border-2 border-green-600 bg-white text-5xl">
+</SdWatch1>
+
+
+<style>
+</style>
+
+@code{
+
+    private string Alarm { get; set; }
+
+    private void ShowAlarm(DateTime time)
+    {
+        Alarm = time.ToLongTimeString();
+        StateHasChanged();
+    }
+}
